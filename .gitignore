@@ -1,0 +1,15 @@
+**/bin/
+**/obj/
+**/temperaturas.db
+**/temperaturas.db-shm
+**/temperaturas.db-wal
+.vs/
+
+# Firmware ESP32 fora do escopo desta entrega
+firmware/
+
+# Frontend React/Vite
+front end/node_modules/
+front end/dist/
+front end/.env
+front end/.env.local

@@ -1,0 +1,34 @@
+@baseUrl = https://localhost:7136
+@apiKey = defina-uma-chave-local
+
+### Listar leituras
+GET {{baseUrl}}/api/temperaturas
+
+### Filtrar por sensor e período
+GET {{baseUrl}}/api/temperaturas?sensorId=esp32-01&de=2026-10-01T00:00:00Z&ate=2026-10-31T23:59:59Z
+
+### Consultar uma leitura
+GET {{baseUrl}}/api/temperaturas/1
+
+### Criar leitura
+POST {{baseUrl}}/api/temperaturas
+Content-Type: application/json
+X-Api-Key: {{apiKey}}
+
+{
+  "valorCelsius": 25.5,
+  "sensorId": "esp32-01"
+}
+
+### Corrigir leitura
+PUT {{baseUrl}}/api/temperaturas/1
+Content-Type: application/json
+X-Api-Key: {{apiKey}}
+
+{
+  "valorCelsius": 26.0
+}
+
+### Excluir leitura
+DELETE {{baseUrl}}/api/temperaturas/1
+X-Api-Key: {{apiKey}}
